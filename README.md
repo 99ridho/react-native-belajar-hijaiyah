@@ -11,7 +11,9 @@ Aplikasi belajar huruf hijaiyah ini ditulis dengan menggunakan framework React N
 
 ## Screenshoot
 
-![ss](http://i.imgur.com/ARqn4ax.jpg)
+![ss](http://i.imgur.com/qf9QqE0.jpg)
+
+![ss](http://i.imgur.com/Q1sBDav.jpg)
 
 ## TODO
 

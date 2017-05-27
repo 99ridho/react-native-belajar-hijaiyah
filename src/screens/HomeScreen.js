@@ -33,6 +33,7 @@ export default class HomeScreen extends Component {
       <Image source={require('../../assets/img/kids-bg.jpg')} style={styles.imageContainer}>
         <ListView
           style={styles.listView}
+          contentContainerStyle={styles.listViewContent}
           dataSource={this.state.dataSource}
           renderRow={(rowData) => this._renderRow(rowData)}
         />
@@ -56,9 +57,14 @@ export default class HomeScreen extends Component {
 const styles = StyleSheet.create({
   listView: {
     backgroundColor: 'transparent',
-    marginTop: 30,
-    marginBottom: 30,
-    width: 300
+    marginTop: 20,
+    marginBottom: 20,
+    width: 450
+  },
+  listViewContent: {
+    justifyContent: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
   },
   imageContainer: {
     flex: 1,
@@ -69,11 +75,14 @@ const styles = StyleSheet.create({
   },
   rowContainer: {
     backgroundColor: 'transparent',
-    padding: 10
+    margin: 10,
+    width: 100,
+    height: 100
   },
   rowButton: {
     backgroundColor: '#deb887',
-    height: 70,
+    width: 100,
+    height: 100,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center'
