@@ -12,8 +12,11 @@ import { screenWidth, screenHeight } from '../config/metrics';
 import { NavigationActions } from 'react-navigation';
 import Entypo from 'react-native-vector-icons/Entypo';
 
-export default class HurufHijaiyah extends Component {
+export default class HurufHijaiyahViewerScreen extends Component {
   render() {
+
+    const { arabic, latin, pronounciation } = this.props.navigation.state.params;
+
     return (
       <Image source={require('../../assets/img/kids-bg.jpg')} style={styles.imageContainer}>
         <View style={{flex: 1, backgroundColor: 'transparent'}}>
@@ -25,8 +28,9 @@ export default class HurufHijaiyah extends Component {
         </View>
         <View style={styles.centerHurufContainer}>
           <ElevatedView elevation={5} style={styles.hurufContainer}>
-              <Text style={styles.arabicText}>ﻕ</Text>
-              <Text style={styles.latinArabicText}>qāf</Text>
+              <Text style={styles.arabicText}>{arabic}</Text>
+              <Text style={styles.latinArabicText}>{latin}</Text>
+              <Text style={styles.latinArabicText}>{pronounciation}</Text>
           </ElevatedView>
           <TouchableOpacity onPress={() => {}}>
             <ElevatedView elevation={5} style={styles.playButton}>
@@ -71,7 +75,7 @@ const styles = StyleSheet.create({
   },
   hurufContainer: {
     backgroundColor: '#deb887',
-    height: 250,
+    height: 260,
     width: 350,
     borderRadius: 10,
     alignItems: 'center',
@@ -86,7 +90,7 @@ const styles = StyleSheet.create({
   },
   arabicText: {
     color: 'brown',
-    fontSize: 120,
+    fontSize: 125,
     fontWeight: 'bold'
   },
   latinArabicText: {

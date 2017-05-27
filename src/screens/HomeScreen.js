@@ -11,15 +11,16 @@ import {
 import Orientation from 'react-native-orientation';
 import ElevatedView from '../components/ElevatedView';
 import { screenWidth, screenHeight } from '../config/metrics';
+import { hijaiyah } from '../hijaiyah';
 
-export default class Home extends Component {
+export default class HomeScreen extends Component {
 
   constructor(props) {
     super(props);
 
     this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
-      dataSource: this.ds.cloneWithRows(['Alif', 'Ba', 'Ta', 'Sa', 'Ja']),
+      dataSource: this.ds.cloneWithRows(hijaiyah),
     };
   }
 
@@ -42,9 +43,9 @@ export default class Home extends Component {
   _renderRow(rowData) {
     return (
       <View style={styles.rowContainer}>
-        <TouchableOpacity onPress={() => {this.props.navigation.navigate('HurufHijaiyah')}}>
+        <TouchableOpacity onPress={() => {this.props.navigation.navigate('HurufHijaiyah', rowData)}}>
           <ElevatedView elevation={5} style={styles.rowButton}>
-            <Text style={styles.rowButtonText}>{rowData}</Text>
+            <Text style={styles.rowButtonText}>{rowData.arabic}</Text>
           </ElevatedView>
         </TouchableOpacity>
       </View>
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
   },
   rowButtonText: {
     color: 'brown',
-    fontSize: 25,
+    fontSize: 50,
     fontFamily: 'Sarala',
     fontWeight: 'bold'
   }

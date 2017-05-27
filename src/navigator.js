@@ -1,13 +1,13 @@
 import { StackNavigator } from 'react-navigation';
-import Home from './screens/Home';
-import HurufHijaiyah from './screens/HurufHijaiyah';
+import HomeScreen from './screens/HomeScreen';
+import HurufHijaiyahViewerScreen from './screens/HurufHijaiyahViewerScreen';
 
 export const RootNavigator = StackNavigator({
   Home: {
-    screen: Home
+    screen: HomeScreen
   },
   HurufHijaiyah: {
-    screen: HurufHijaiyah
+    screen: HurufHijaiyahViewerScreen
   }
 }, {
   headerMode: 'none'
