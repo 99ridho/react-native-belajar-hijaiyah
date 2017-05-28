@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20, 
+    marginTop: 15, 
     marginLeft: 10
   },
   playButton: {
@@ -71,16 +71,16 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20,
+    marginTop: 20
   },
   hurufContainer: {
     backgroundColor: '#deb887',
-    height: 260,
-    width: 350,
+    height: 200,
+    width: 300,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20
+    marginTop: 15
   },
   buttonText: {
     color: 'brown',
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   },
   arabicText: {
     color: 'brown',
-    fontSize: 125,
+    fontSize: 85,
     fontWeight: 'bold'
   },
   latinArabicText: {
